@@ -1,0 +1,75 @@
+name: cf
+channels:
+- conda-forge
+- talley
+dependencies:
+- python=3.6*
+- setuptools
+- sympy
+- numpy
+- scipy
+- statsmodels
+- pint
+- python-graphviz
+- dask
+- xarray
+- distributed
+- tornado=4.4*
+- matplotlib
+- altair
+- bokeh
+- datashader
+- toolz
+- cytoolz
+- requests
+- pandas
+- pytables
+- seaborn
+- sqlalchemy
+- ipython
+- jupyter
+- sqlite
+- scikit-image
+- scikit-learn
+- xlrd
+- xlwt
+- openpyxl
+- pytest
+- hypothesis
+- imageio
+- tqdm
+- cython
+- numba
+- numexpr
+- shapely
+- rasterio
+- folium
+- fiona
+- cartopy
+- geopandas
+- pysal
+- netcdf4
+- gdal
+- line_profiler
+- memory_profiler
+- networkx
+- beautifulsoup4
+- vigra
+- snakeviz
+- plotly
+- xgboost
+- coverage
+- pytest-cov
+- holoviews
+- xarray
+- gcc
+- protobuf
+- tensorflow
+- spimagine
+- pip:
+  - gala  # conda-forge version is 3.5-only
+  - viridis
+  - notedown
+  - jupytercontrib
+  - bs4
+  - jupyterthemes
