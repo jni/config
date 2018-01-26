@@ -1,0 +1,2 @@
+#!/bin/bash
+cp default-i3-config ~/.config/i3/config
