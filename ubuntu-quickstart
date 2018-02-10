@@ -25,9 +25,24 @@ sudo apt install glances
 sudo apt install i3
 sudo apt install chromium-browser
 
+# screenshot grabber for i3 lock screen
+sudo apt install scrot
+
 # Macbook Pro connected to thunderbolt
 # xrandr --output DP-3 --scale 1.5x1.5 --mode 2560x1440 --fb 6720x2160 --pos 2880x0
 
 # Evernote client
 wget https://github.com/klauscfhq/tusk/releases/download/v0.9.2/tusk_0.9.2_amd64.deb
 sudo apt install ./tusk_0.9.2_amd64.deb 
+
+# Facetime HD camera drivers
+sudo apt install linux-headers git kmod libssl-dev checkinstall
+git clone https://github.com/patjak/bcwc_pcie.git
+cd bcwc_pcie/firmware
+sudo checkinstall
+sudo depmod
+sudo modprobe facetimehd
+echo facetimehd >> /etc/modules
+# make it work after resuming from sleep; this will only run in the same
+# directory as this file.
+sudo cp facetime-wakeup.sh /usr/lib/systemd/system-sleep/99facetimehd
