@@ -1,0 +1,33 @@
+# (install miniconda manually)
+
+# Linux driver for wifi for MBP
+# sudo apt install firmware-b43-installer
+
+sudo apt install vim
+sudo apt install dconf-tools
+# dconf-editor
+sudo apt install curl
+
+# install signal desktop
+curl -s https://updates.signal.org/desktop/apt/keys.asc | sudo apt-key add -
+echo "deb [arch=amd64] https://updates.signal.org/desktop/apt xenial main" | sudo tee -a /etc/apt/sources.list.d/signal-xenial.list
+sudo apt update && sudo apt install signal-desktop
+
+# install dropbox
+sudo apt-key adv --keyserver pgp.mit.edu --recv-keys 1C61A2656FB57B7E4DE0F4C1FC918B335044912E
+echo "deb [arch=i386,amd64] http://linux.dropbox.com/ubuntu xenial main" | sudo tee -a /etc/apt/sources.list.d/dropbox-xenial.list
+sudo apt update && sudo apt install dropbox python-gpgme
+
+# resource monitoring
+sudo apt install glances
+
+# i3 window manager
+sudo apt install i3
+sudo apt install chromium-browser
+
+# Macbook Pro connected to thunderbolt
+# xrandr --output DP-3 --scale 1.5x1.5 --mode 2560x1440 --fb 6720x2160 --pos 2880x0
+
+# Evernote client
+wget https://github.com/klauscfhq/tusk/releases/download/v0.9.2/tusk_0.9.2_amd64.deb
+sudo apt install ./tusk_0.9.2_amd64.deb 
