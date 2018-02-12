@@ -46,3 +46,5 @@ echo facetimehd >> /etc/modules
 # make it work after resuming from sleep; this will only run in the same
 # directory as this file.
 sudo cp facetime-wakeup.sh /usr/lib/systemd/system-sleep/99facetimehd
+
+sudo apt install xclip
