@@ -48,3 +48,10 @@ echo facetimehd >> /etc/modules
 sudo cp facetime-wakeup.sh /usr/lib/systemd/system-sleep/99facetimehd
 
 sudo apt install xclip
+
+# installing git-lfs
+# as per: https://github.com/git-lfs/git-lfs/wiki/Installation
+curl -s https://packagecloud.io/install/repositories/github/git-lfs/script.deb.sh | sudo bash
+sudo apt-get install git-lfs
+git lfs install
+
