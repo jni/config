@@ -1,0 +1,21 @@
+#!/usr/env python
+
+import argparse
+import sys
+from subprocess import call
+
+if __name__ == '__main__':
+    parser = argparse.ArgumentParser('kb')
+    parser.add_argument('kind', help='Keyboard kind. "default" or "sculpt"',
+                        default='default', nargs='?')
+
+    args = parser.parse_args()
+
+    if args.kind == 'default':
+        call(str.split('setxkbmap dvorak -option caps:escape '
+                       '-option compose:ralt'))
+    elif args.kind == 'sculpt':
+        call(str.split('setxkbmap dvorak -option caps:escape '
+                       '-option altwin:swap_lalt_lwin '
+                       '-option compose:ralt '
+                       '-option altwin:menu'))
