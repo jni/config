@@ -27,7 +27,7 @@ let g:ycm_python_binary_path = 'python'
 " Type at least three chars before autocomplete
 let g:ycm_min_num_of_chars_for_completion = 3
 
-Plugin 'vim-syntastic/syntastic'
+Plugin 'w0rp/ale'
 Plugin 'nvie/vim-flake8'
 
 Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
