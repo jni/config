@@ -56,7 +56,7 @@ bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
 # move workspaces
-bindsym Mod1+Control+Left workspace previous
+bindsym Mod1+Control+Left workspace prev
 bindsym Mod1+Control+Right workspace next
 
 # split in horizontal orientation
