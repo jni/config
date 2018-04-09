@@ -27,7 +27,7 @@ fi
 
 
 # Add conda command
-. /home/jni/miniconda3/etc/profile.d/conda.sh
+. $HOME/miniconda3/etc/profile.d/conda.sh
 # Enable the conda-forge environment
 conda activate cf
 
