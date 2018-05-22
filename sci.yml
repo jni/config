@@ -62,7 +62,6 @@ dependencies:
 - pytest-cov
 - holoviews
 - xarray
-- gcc
 - protobuf
 - tensorflow
 - spimagine
