@@ -3,6 +3,10 @@
 # Linux driver for wifi for MBP
 # sudo apt install firmware-b43-installer
 
+# install inconsolata
+sudo apt install fonts-inconsolata
+sudo fc-cache -fv  # not sure what this does, see https://blog.programster.org/ubuntu-14-04-install-inconsolata-monospace-font
+
 sudo apt install vim
 sudo apt install dconf-tools
 # dconf-editor
@@ -58,3 +62,14 @@ git lfs install
 sudo add-apt-repository ppa:jonathonf/vim
 sudo apt update
 sudo apt install vim  # get vim8
+
+
+# light
+cd ~/projects
+git clone git@github.com:haikarainen/light
+cd light
+sudo make
+sudo make install
+
+# volume
+sudo apt install volti
