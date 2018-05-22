@@ -17,7 +17,7 @@ set $mod Mod1
 # font pango:monospace 8
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
-font pango:DejaVu Sans Mono 16
+font pango:DejaVu Sans Mono 12
 
 # Before i3 v4.8, we used to recommend this one as the default:
 # font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
@@ -136,13 +136,13 @@ exec --no-startup-id setxkbmap dvorak -option caps:escape -option compose:ralt
 exec --no-startup-id synclient PalmDetect=1 HorizTwoFingerScroll=1 VertScrollDelta=-243 HorizScrollDelta=-243
 
 # Pulse Audio controls
-bindsym XF86AudioRaiseVolume exec pactl set-sink-mute 0 0 && pactl set-sink-volume 0 +5% #increase sound volume
-bindsym XF86AudioLowerVolume exec pactl set-sink-mute 0 0 && pactl set-sink-volume 0 -5% #decrease sound volume
-bindsym XF86AudioMute exec pactl set-sink-mute 0 toggle # mute sound
+bindsym XF86AudioRaiseVolume exec "pactl set-sink-mute 0 0 && pactl set-sink-volume 0 +5%"
+bindsym XF86AudioLowerVolume exec "pactl set-sink-mute 0 0 && pactl set-sink-volume 0 -5%"
+bindsym XF86AudioMute exec pactl set-sink-mute 0 toggle
 
 # Screen brightness controls
-bindsym XF86MonBrightnessUp exec xbacklight -inc 5 # increase screen brightness
-bindsym XF86MonBrightnessDown exec xbacklight -dec 5 # decrease screen brightness
+bindsym XF86MonBrightnessUp exec light -A 5 # increase screen brightness
+bindsym XF86MonBrightnessDown exec light -U 5 # decrease screen brightness
 
 # Fuzzy screen lock
 bindsym Control+Mod1+l exec "~/scripts/fuzzy-lock.sh"
