@@ -128,7 +128,7 @@ exec --no-startup-id dropbox start
 
 # startup keyboard and trackpad settings
 
-exec --no-startup-id setxkbmap dvorak -option caps:escape -option compose:ralt
+exec --no-startup-id setxkbmap dvorak -option caps:escape -option compose:prsc
 #exec --no-startup-id xmodmap -e "clear lock"
 #exec --no-startup-id xmodmap -e "keysym Caps_Lock = Escape"
 #exec --no-startup-id xmodmap -e "keysym Alt_R = Multi_key"
