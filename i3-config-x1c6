@@ -10,7 +10,7 @@
 #
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
 
-set $mod Mod1
+set $mod Mod4
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
@@ -128,7 +128,7 @@ exec --no-startup-id dropbox start
 
 # startup keyboard and trackpad settings
 
-exec --no-startup-id setxkbmap dvorak -option caps:escape -option compose:prsc
+exec --no-startup-id setxkbmap dvorak -option caps:escape -option compose:prsc -option altwin:swap_lalt_lwin
 #exec --no-startup-id xmodmap -e "clear lock"
 #exec --no-startup-id xmodmap -e "keysym Caps_Lock = Escape"
 #exec --no-startup-id xmodmap -e "keysym Alt_R = Multi_key"
