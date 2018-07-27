@@ -76,3 +76,11 @@ load {
 disk "/" {
         format = "%avail"
 }
+
+volume master {
+        format = "♪: %volume"
+        format_muted = "♪: X"
+        device = "default"
+        mixer = "Master"
+        mixer_idx = 0
+}

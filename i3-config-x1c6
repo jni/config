@@ -125,6 +125,7 @@ bindsym $mod+Shift+period exec "i3-nagbar -t warning -m 'You pressed the exit sh
 
 exec --no-startup-id nm-applet
 exec --no-startup-id dropbox start
+exec --no-startup-id mate-power-manager
 
 # startup keyboard and trackpad settings
 
@@ -141,11 +142,11 @@ bindsym XF86AudioLowerVolume exec "pactl set-sink-mute 0 0 && pactl set-sink-vol
 bindsym XF86AudioMute exec pactl set-sink-mute 0 toggle
 
 # Screen brightness controls
-bindsym XF86MonBrightnessUp exec light -A 5 # increase screen brightness
-bindsym XF86MonBrightnessDown exec light -U 5 # decrease screen brightness
+bindsym XF86MonBrightnessUp exec light -A 10 # increase screen brightness
+bindsym XF86MonBrightnessDown exec light -U 10 # decrease screen brightness
 
 # Fuzzy screen lock
-bindsym Control+Mod1+l exec "~/scripts/fuzzy-lock.sh"
+bindsym Control+Mod4+l exec "~/scripts/fuzzy-lock.sh"
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
@@ -162,8 +163,8 @@ mode "resize" {
 
         # same bindings, but for the arrow keys
         bindsym Left resize shrink width 5 px or 5 ppt
-        bindsym Down resize grow height 5 px or 5 ppt
-        bindsym Up resize shrink height 5 px or 5 ppt
+        bindsym Down resize shrink height 5 px or 5 ppt
+        bindsym Up resize grow height 5 px or 5 ppt
         bindsym Right resize grow width 5 px or 5 ppt
 
         # back to normal: Enter or Escape
