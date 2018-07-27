@@ -73,3 +73,11 @@ sudo make install
 
 # volume
 sudo apt install volti
+
+# power
+sudo apt install mate-power-manager
+
+# download and install fiji
+cd ~/Downloads
+wget https://downloads.imagej.net/fiji/latest/fiji-linux64.zip
+unzip fiji-linux64.zip
