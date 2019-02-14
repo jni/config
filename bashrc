@@ -160,3 +160,4 @@ export PATH=$PATH:/opt/apache-maven-3.3.9/bin
 # Add shortcut for opening the current directory with PyCharm or Tower
 alias pycharm='open -a /Applications/PyCharm.app .'
 alias tower='open -a /Applications/Tower.app .'
+alias ipc='ipython --profile fast'
