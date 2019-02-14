@@ -139,6 +139,8 @@ exec --no-startup-id setxkbmap dvorak -option caps:escape -option compose:prsc -
 
 exec --no-startup-id synclient PalmDetect=1 HorizTwoFingerScroll=1 VertScrollDelta=-243 HorizScrollDelta=-243
 
+exec --no-startup-id compton
+
 # Pulse Audio controls
 bindsym XF86AudioRaiseVolume exec "pactl set-sink-mute 0 0 && pactl set-sink-volume 0 +5%"
 bindsym XF86AudioLowerVolume exec "pactl set-sink-mute 0 0 && pactl set-sink-volume 0 -5%"
