@@ -53,20 +53,21 @@ run_watch VPN {
 }
 
 tztime madrid {
-        format = "Madrid: %H:%M(%a)"
+        format = "MAD: %H:%M(%a)"
         timezone = "Europe/Madrid"
 }
 tztime LA {
-        format = "LA: %H:%M(%a)"
+        format = "SF: %H:%M(%a)"
         timezone = "America/Los_Angeles"
 }
 tztime DC {
-        format = "DC: %H:%M(%a)"
+        format = "NY: %H:%M(%a)"
         timezone = "America/New_York"
 }
 
 tztime local {
-        format = "%a %d %b %Y %H:%M"
+        format = "%a %d %b %H:%M"
+        timezone = "Australia/Melbourne"
 }
 
 load {
