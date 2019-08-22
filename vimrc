@@ -232,6 +232,8 @@ augroup markdown
     au BufNewFile,BufRead *.md,*.markdown setlocal filetype=ghmarkdown
 augroup END
 
+" set cursor to start of email when replying in mutt
+autocmd FileType mail execute "normal /^\\n\<CR>"
 
 " pyflakes support for Python code
 filetype plugin on
