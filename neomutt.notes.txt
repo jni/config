@@ -1,0 +1,13 @@
+ctrl-g : cancel whatever you're doing
+
+. (change) change folder: configure to g
+
+alias
+
+html2mutt
+
+vimrc email formatter
+
+setting display width independent from line width
+
+
