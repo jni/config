@@ -18,18 +18,8 @@ export HISTSIZE=100000
 # Use home bin dir for some small utilities
 export PATH=$PATH:~/bin
 
-# Use virtualenv and virtualenvwrapper if available
-if [ `command -v virtualenvwrapper.sh` ]; then
-    export WORKON_HOME=$HOME/venv
-    export PROJECT_HOME=$HOME/projects
-    source `which virtualenvwrapper.sh`
-fi
-
-
 # Add conda command
-. $HOME/miniconda3/etc/profile.d/conda.sh
-# Enable the conda-forge environment
-conda activate cf
+. $HOME/conda/etc/profile.d/conda.sh
 
 ### Setting prompt ###
 
@@ -41,13 +31,12 @@ git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
 # pretty string that includes a timestamp and three-line prompt
 export PS1='\n\[\e[32;1m\]\u\[\e[0m\]\[\e[32m\]@\[\e[36m\]\h\[\e[33m\] \d \A \n\[\e[36m\] \w \[\e[33m\]$(parse_git_branch)\n \$\[\e[0m\] '
 
+# Enable the conda-forge environment
+conda activate all
+
 # git autocomplete
 git_completion=~/projects/git-completion/git-completion.bash
 if [ -f $git_completion ]; then
-    source $git_completion
-elif [ -d $HOME/Projects.sparsebundle ]; then
-    open $HOME/Projects.sparsebundle
-    sleep 1
     source $git_completion
 fi
 
@@ -150,7 +139,7 @@ function marks {
 }
 
 
-export RSTUDIO_WHICH_R=/Users/nuneziglesiasj/anaconda/envs/R/bin/R
+export RSTUDIO_WHICH_R=$HOME/conda/envs/R/bin/R
 
 
 # Add path for Maven
@@ -161,3 +150,4 @@ export PATH=$PATH:/opt/apache-maven-3.3.9/bin
 alias pycharm='open -a /Applications/PyCharm.app .'
 alias tower='open -a /Applications/Tower.app .'
 alias ipc='ipython --profile fast'
+
