@@ -10,4 +10,6 @@ vimrc email formatter
 
 setting display width independent from line width
 
+Set 'u' to close the current email view (pager)
+
 
