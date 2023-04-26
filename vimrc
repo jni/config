@@ -267,6 +267,9 @@ set matchpairs+=<:>
 " mode keystrokes beginning \t but some function keys (which won't work in all
 " terminals) are also mapped.
 
+" Map g- as an alias for g;
+nnoremap g- g;
+
 " have \tp ("toggle paste") toggle paste on/off and report the change, and
 " where possible also have <F4> do this both in normal and insert mode:
 nnoremap \tp :set invpaste paste?<CR>
