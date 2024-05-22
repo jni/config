@@ -1,0 +1,49 @@
+name: all
+channels:
+- conda-forge
+dependencies:
+- python=3.11*
+- pip
+- numpy
+- scipy
+- matplotlib
+- napari
+- scikit-image
+- scikit-learn
+- ipython
+- pyqt
+- statsmodels
+- pint
+- python-graphviz
+- dask
+- xarray
+- distributed
+- altair
+- bokeh
+- datashader
+- toolz
+- cytoolz
+- pandas
+- seaborn
+- jupyter
+- notebook
+- openpyxl
+- pytest
+- pytest-qt
+- pytest-cov
+- coverage
+- imageio
+- tqdm
+- cython
+- numba
+- line_profiler
+- memory_profiler
+- networkx
+- beautifulsoup4
+- plotly
+- zarr
+- ome-zarr
+- skan
+- pip:
+  - git+https://github.com/JoeyButler/pygments-style-railscasts.git
+  - tensorstore
