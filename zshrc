@@ -133,7 +133,31 @@ nuke() {
     mu env remove --name all -y
     mu env create -y -f ~/projects/config/all.yml
     mu activate all
-    pip uninstall -y napari
-    pip install -U -e "${HOME}/projects/napari[dev,testing]"
-    pip install -U -e "${HOME}/projects/skan"
+    uv pip uninstall -y napari
+    uv pip install -U -e "${HOME}/projects/napari[dev,testing]"
+    uv pip install -U -e "${HOME}/projects/skan"
+    uv pip install -U -e "${HOME}/projects/affinder"
+    uv pip install -U -e "${HOME}/projects/zarpaint"
 }
+
+# rebuilding main env
+test-napari() {
+    mu deactivate
+    mu env remove --name napari-pre-release -y
+    mu env create -y -n napari-pre-release python=3.12 pip uv
+    mu activate napari-pre-release
+    #uv pip install --prerelease=allow "napari[all]"
+    pip install --pre "napari[all]"
+    napari
+}
+
+pwhich() {
+    python -c "import $1; print($1)"
+}
+
+# bun completions
+[ -s "/Users/jni/.bun/_bun" ] && source "/Users/jni/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
